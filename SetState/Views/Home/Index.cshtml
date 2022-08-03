@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center" asp-controller="Home" asp-action="Index">
+    <form>
+        <input type="text" name="data" />
+        <input type="date" name="date" />
+        <input type="submit" value="Send" />
+    </form>
+
+    @if (ViewBag.Data != null)
+    { 
+    <p>Cookie Data: @ViewBag.Data</p>
+    }
+</div>
